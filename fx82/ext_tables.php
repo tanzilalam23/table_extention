@@ -11,6 +11,12 @@ call_user_func(
             'IGI'
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'F6.Fx82',
+            'Fx83',
+            'pubg'
+        );
+
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('fx82', 'Configuration/TypoScript', 'Team');
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_fx82_domain_model_team', 'EXT:fx82/Resources/Private/Language/locallang_csh_tx_fx82_domain_model_team.xlf');

@@ -28,21 +28,11 @@
 			</tr>
 
 			<f:for each="{teams}" as="team">
-
-
-      		
- 			<f:for each="{team.country}" as="team1">
-			<td><f:link.action action="show" arguments="{team : team}"> {team1.country}     </f:link.action></td></f:for>
-	
-
-
 				<tr>
-
-				
 					<td><f:link.action action="show" arguments="{team : team}"> {team.name}</f:link.action></td>
 					<td><f:link.action action="show" arguments="{team : team}"> {team.age}</f:link.action></td>
 					<td><f:link.action action="show" arguments="{team : team}"> {team.phoneNo}</f:link.action></td>
-					<td><f:format.html>{team.address}</f:format.html></td>
+					<td><f:link.action action="show" arguments="{team : team}"> {team.address}</f:link.action></td>
 					<td><f:link.action action="edit" arguments="{team : team}">Edit</f:link.action></td>
 					<td><f:link.action action="delete" arguments="{team : team}">Delete</f:link.action></td>
 				</tr>

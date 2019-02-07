@@ -19,6 +19,20 @@ call_user_func(
             ]
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'F6.Fx82',
+            'Fx83',
+            [
+                'Team' => 'list, show, new, create, edit, update, delete',
+                'Country' => 'list, show, new, create, edit, update, delete'
+            ],
+            // non-cacheable actions
+            [
+                'Team' => 'create, update, delete',
+                'Country' => 'create, update, delete'
+            ]
+        );
+
     // wizards
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
         'mod {
@@ -33,6 +47,15 @@ call_user_func(
                             list_type = fx82_fx82
                         }
                     }
+                    fx83 {
+                        iconIdentifier = fx82-plugin-fx83
+                        title = LLL:EXT:fx82/Resources/Private/Language/locallang_db.xlf:tx_fx82_fx83.name
+                        description = LLL:EXT:fx82/Resources/Private/Language/locallang_db.xlf:tx_fx82_fx83.description
+                        tt_content_defValues {
+                            CType = list
+                            list_type = fx82_fx83
+                        }
+                    }
                 }
                 show = *
             }
@@ -44,6 +67,12 @@ call_user_func(
 				'fx82-plugin-fx82',
 				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
 				['source' => 'EXT:fx82/Resources/Public/Icons/user_plugin_fx82.svg']
+			);
+		
+			$iconRegistry->registerIcon(
+				'fx82-plugin-fx83',
+				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+				['source' => 'EXT:fx82/Resources/Public/Icons/user_plugin_fx83.svg']
 			);
 		
     }

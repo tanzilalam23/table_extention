@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2019-02-07T09:59:43Z" product-name="fx82">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-02-07T13:25:52Z" product-name="fx82">
 		<header/>
 		<body>
 			<trans-unit id="tx_fx82_domain_model_team">
@@ -31,6 +31,12 @@
 				<source>IGI</source>
 			</trans-unit>
 			<trans-unit id="tx_fx82_fx82.description">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="tx_fx82_fx83.name">
+				<source>pubg</source>
+			</trans-unit>
+			<trans-unit id="tx_fx82_fx83.description">
 				<source></source>
 			</trans-unit>
 		</body>

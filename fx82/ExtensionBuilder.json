@@ -187,6 +187,16 @@
                 "description": "",
                 "key": "fx82",
                 "name": "IGI"
+            },
+            {
+                "actions": {
+                    "controllerActionCombinations": "",
+                    "noncacheableActions": "",
+                    "switchableActions": ""
+                },
+                "description": "",
+                "key": "fx83",
+                "name": "pubg"
             }
         ],
         "vendorName": "F6"
@@ -206,7 +216,7 @@
         }
     ],
     "log": {
-        "last_modified": "2019-02-07 09:59",
+        "last_modified": "2019-02-07 01:25",
         "extension_builder_version": "8.10.4",
         "be_user": " (1)"
     }
