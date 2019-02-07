@@ -1,0 +1,50 @@
+{
+    "modules": [],
+    "properties": {
+        "backendModules": [],
+        "description": "",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 8.7.0-8.7.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "8.7.0-8.7.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "fx82",
+        "name": "Team",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [
+            {
+                "company": "F6",
+                "email": "tanzil@gmail.com",
+                "name": "Tanzil",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "",
+                    "noncacheableActions": "",
+                    "switchableActions": ""
+                },
+                "description": "",
+                "key": "fx82",
+                "name": "IGI"
+            }
+        ],
+        "vendorName": "F6"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2019-02-07 06:16",
+        "extension_builder_version": "8.10.4",
+        "be_user": " (1)"
+    }
+}

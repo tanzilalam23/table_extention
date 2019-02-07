@@ -1,0 +1,28 @@
+{
+    "name": "demo/abc",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [
+        {
+            "name": "tanzil",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^8.7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Demo\\Abc\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Demo\\Abc\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "abc": "self.version",
+        "typo3-ter/abc": "self.version"
+    }
+}

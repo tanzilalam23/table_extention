@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-02-06T07:50:32Z" product-name="abc">
+		<header/>
+		<body>
+			<trans-unit id="tx_abc_domain_model_fcontent">
+				<source>Fcontent</source>
+			</trans-unit>
+			<trans-unit id="tx_abc_domain_model_fcontent.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_abc_domain_model_fcontent.subtitle">
+				<source>Subtitle</source>
+			</trans-unit>
+			<trans-unit id="tx_abc_domain_model_fcontent.priority">
+				<source>Priority</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

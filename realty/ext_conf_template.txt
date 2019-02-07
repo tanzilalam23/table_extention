@@ -1,0 +1,30 @@
+# cat=basic; type=boolean; label=Configuration check:Enables the configuration check in the front-end.
+enableConfigCheck = 1
+# cat=basic; type=string; label=Import directory:Absolute path of the directory that contains the OpenImmo ZIP files to import.
+importFolder =
+# cat=basic; type=boolean; label=Delete imported ZIPs:If this option is set, ZIP archives will be deleted from the import folder after their contents have been written to the database.
+deleteZipsAfterImport = 1
+# cat=basic; type=boolean; label=Allow deletion of records for full synchronization
+importCanDeleteRecordsForFullSync = 0
+# cat=basic; type=boolean; label=Only import for registered FE users:If this is checked, only the records with an OpenImmoAnid ANID that matches a FE user will be imported. Non-imported records will be mentioned in the log.
+onlyImportForRegisteredFrontEndUsers = 0
+# cat=basic; type=string; label=Restrict import to FE user groups:Comma-separated list of FE user group UIDs. Only realty objects of members of these user groups will be imported. Leave empty to set no restriction on FE user groups. This option will be ignored if the option above is not checked.
+allowedFrontEndUserGroups =
+# cat=basic; type=integer; label=PID for realty records and images:Page ID of the system folder where new realty and image records will be stored.
+pidForRealtyObjectsAndImages =
+# cat=basic; type=integer; label=PID for auxiliary records:Page ID of the system folder where auxiliary records (like cities or house types) will be stored. Leave this field empty to store these records in the same system folder as realty records and images.
+pidForAuxiliaryRecords =
+# cat=basic; type=boolean; label=Use FE user data as contact data: If checked, the data of the FE user who has the same OpenImmo ANID as found in the imported record is used. This means, the notification e-mail (if this option is enabled) will be sent to this user and if it is enabled to show contact data in the FE, it is also this user's data that will be used. No matter which data is used, the imported FE user data will be stored within the record.
+useFrontEndUserDataAsContactDataForImportedRecords = 0
+# cat=basic; type=string; label=Recipient of the import logs:This e-mail address will receive the complete import log if "Notify contact persons" is disabled. If "Notify contact persons" is enabled, this address will receive only the log parts about OpenImmo files that did not contain a valid contact e-mail address. Leave this field empty to completely disable e-mailing the import logs.
+emailAddress =
+# cat=basic; type=boolean; label=E-mail the log only on errors:Check this to only have the import send out e-mails if an errors has occurred. This will suppress the e-mailing the import log if everything has gone well.
+onlyErrors = 0
+# cat=basic; type=boolean; label=Notify contact persons:If this is checked, the contact e-mail addresses listed in the OpenImmo files will receive the import log of their objects.
+notifyContactPersons = 0
+# cat=basic; type=string; label=XML Schema file for validation:Absolute path of the XML Schema file (*.xsd) that will be used for validating the OpenImmo files during the import.
+openImmoSchema =
+# cat=basic; type=string; label=Language of the import messages:This will determine the language that will be used in status output and e-mails during the import. Use the ISO 639-1 code, for example "en" or "de".
+cliLanguage = en
+# cat=basic; type=string; label=E-mail text template:Path of the text template file for the e-mail layout. Needs to start with EXT:.
+emailTemplate = EXT:realty/Resources/Private/Templates/Email/Notification.txt

@@ -1,0 +1,672 @@
+0.6.0 - released 2015-01-17
+
+Features:
+- [#3570] Use cropscale for generating thumbnails
+- [#4163] Add a decimal mark and thousands separator to the FE locallang
+- [#5225] Add first name and salutation for objects
+- [#5186] Add an automatic update function for contact_phone
+- [#5027] Import the fields for the "Energiepass"/"Energieausweis"
+- [#5027] Display the fields for the "Energiepass"/"Energieausweis"
+- [#5027] Add the fields for the "Energiepass"/"Energieausweis"
+- [#4678] Switch to Google Maps V3 (initial patch by Judith Haffner)
+- [#3822] Use the Google geocoding V3 from oelib in realty
+- [#4587] Add a field "Sea view" to the realty objects
+- [#2671] Add model::isEmpty
+- [#4413] Add a field "Distance to the sea" to the realty objects
+- [#4118] Add some more area fields
+- [#4090] Add additional image subparts in the single view
+- [#4084] Add a configuration about which JavaScript libraries to include in the single view and image upload
+- [#4103] Allow to upload a separate thumbnail image for the images
+- [#4077] Provide a "floor" subpart & marker in the list view
+- [#4089] Add an option to hide the rent and price in the list view and single view depending on the object status
+- [#4087] Add a single view subpart for the status
+- [#4100] Fill status markers in the list view
+- [#4072] Replace the "rented" field with a "status" field
+- [#4074] Add a field "position" to the images record
+- [#4075] Add an "enableLightbox" TS setup switch
+- [#4072] The clean-up script should also clean up PDFs
+- [#4078] Allow to select the HTML template in the flexforms
+- [#4012] Provide attached PDFs for download in the single view
+- [#4016] Import attached documents (PDFs)
+- [#4062] Add a sorting column to the documents
+- [#4014] Add a Model and Mapper for related documents
+- [#4000] Add a field "Bodenbelag" (flooring)
+- [#3999] Add a field "Ausstattungs-Kategorie" (furnishing category)
+- [#4017] Automatically make some content subtypes uncached
+- [#3998] Add, import and display some fields
+- [#4022] Add an icon for documents records to the BE
+- [#2876] Make images sortable in the BE, thanks to Christian Stupp
+- [#4011] Add a field for related documents (uploaded PDFs)
+- [#3725] Validate the terms checkbox in the contact form
+- [#3726] Include the checked checkboxes in the contact form e-mail
+- [#3724] Add some new fields to the contact form
+- [#3721] Add a TS setup configuration & flexforms for the FE page with the terms
+- [#3722] Add some checkboxes for displaying additional fields in the contact form
+- [#3602] In the contact data in the single view, display the new phone number fields
+- [#3601] Import the two new phone number fields
+- [#3600] Add the two new phone number fields to the FE editor
+- [#3599] Add two phone number fields to the DB and TCA
+- [#4162] Add a field "Mieteinnahmen (Soll)"
+
+Localization:
+- [#4606] Update the ES localization (thanks to Martin del Barco)
+- [#3997] Change some field titles in the FE and BE
+
+Bug fixes:
+- [#5232] FE labels in 6.2 are in English instead of German
+- [#5190] Fix code inspection warnings
+- [#5224] Undefined variable $localeConvention in the filter form
+- [#4343] Some unit tests read the real TS setup
+- [#4319} Change != to <> in SQL
+- [#5189] private field isTestMode is used in subclass
+- [#5182] cHash is missing from many links
+- [#5187] mb_strlen(): Unknown encoding in tx_realty_Model_RealtyObjectTest
+- [#5094] Update script needs to update the number of images
+- [#5173] PHP crash in the BE module if no import path is set
+- [#5178] Use time() instead of mktime()
+- [#5163] Make the insert record shortcut TS compatible with 6.2
+- [#5175] Update Prototype, Scriptaculous and Lightbox
+- [#5172] Fix core deprecation notices in TYPO3 CMS 6.2
+- [#5174] Avoid feInterface deprecation warnings in 6.2
+- [#5057] Test error in tx_realty_FrontEnd_MyObjectsListViewTest
+- [#4696] Unit test crash about e-mail and caches in TYPO3 CMS 6.2
+- [#5083] Failing test in tx_realty_FrontEnd_AbstractListViewTest, thanks to Nicole Cordes
+- [#5063] Error about missing token when running the OpenImmo import from the BE module in 6.2
+- [#5020] Error message: The extension CSS Styled Content is not loaded
+- [#5008] Call loadTCA only for TYPO3 CMS < 6.1
+- [#4572] Add .htaccess to all folders with private resources
+- [#4648] Drop early __destruct calls
+- [#4363] Skip the configuration check in the unit tests
+- [#4847] Hide the images and documents in the BE lists
+- [#4792] Error in tx_realty_Import_OpenImmoImportTest
+- [#4779] Single view Google Maps is zoomed in too far
+- [#4737] Missing currency sign for deposit and provision
+- [#1927] Unit tests don't run properly on Windows
+- [#4658] BE crash with SQL error in TYPO3 CMS >= 4.5.23
+- [#4594] Google map coordinates are using a decimal comma if the PHP locale is not set correctly
+- [#4179] Nonsense validation parameters for the rent_per_square_meter field
+- [#3686] For US dollars, the currency needs to be before the amount
+- [#4208] URLs to included CSS and JS files are wrong if TYPO3 is installed in a subdirectory of the website root
+- [#4048] Use $dataHandler->getThisFormData instead of ->__aFormData
+- [#4064] HTML validation errors in the list view
+- [#3716] Only render image records with an image file type in the list view, single view, image upload dialog and both galleries
+- [#4500] Failures in tx_realty_FrontEnd_FormatterTest occur when running all tests
+- [#4496] Checkboxes for the flooring misaligned (thanks to Michael Oehlhof)
+- [#3714] Sorting in the list view is broken (thanks to Michael Oehlhof)
+- [#4485] Add TYPO3 maximum version to ext_emconf.php
+- [#4478] &nbsp; is shown in the drop-downs of the FE editor
+- [#4454] Test failures concerning the images in the current Core master
+- [#3554] Failure in test case testSentEmail(...) with empty tables and no extension settings
+- [#4297] Fix all deprecation log warnings and version-specific unit test failures when running the unit tests on the current Core master
+- [#3815] Throw more meaningful Exceptions
+- [#4373] Pass the filter limitations using JSON instead of serialization
+- [#4353] Test crash with latest Core master concerning the cache manager
+- [#4349] Test crash with latest Core master in tx_realty_FrontEnd_EditorTest
+- [#4354] The OpenImmoImport class uses implode with only one argument
+- [#4347] Fix missing/incorrect @return and return values
+- [#2951] SQL error in the single view if the contact data source is set to "from owner" and sr_feuser_register is not installed
+- [#4282] LF and CRLF in RTE fields need to be imported
+- [#4180] test testDeleteRecordFromTheDatabase fails
+- [#4178] Test testProcessImageUploadWritesNewImageRecordForCurrentObjectToTheDatabase crashes
+- [#4104] Empty image titles in the image upload dialog
+- [#4169] Drop unused code and some unused variables
+- [#4156] Drop dead code from tx_realty_pi1
+- [#4130] Set the numeric locale in our CLI scripts
+- [#4120] Floor value 0 hides all following floor values in the list view
+- [#4094] Use empty configurations in the unit tests
+- [#4057] Test failures in the OpenImmo import testcase
+- [#4058] Typo in the DOM document converter: substitudeSurplusDecimals
+- [#3800] Multiple tests concerning the next/previous buttons fail
+- [#3991] "objektkategorie nutzungsart" gets imported even if an attribute is set to false
+- [#3708] Non-image attachments get imported as images
+- [#3727] LF, CR and tab in the object title need to be replaced by spaces during the import
+- [#3799] Test getTemplatePathReturnsAbsolutePathFromTheConfiguration fails
+- [#3876] Evil unit tests create a folder in the TYPO3 root directory
+- [#3859] Fatal error in the favorites list: Call to private method
+- [#3848] Replace newRecordLinkPosition with levelLinksPosition in the TCA
+- [#3770] Pagination URLs are not htmlspecialchared
+- [#3660] Test failures with PHPUnit 3.4.7
+- [#3656] Don't use TYPO3_branch or compat_version
+- [#3630] The next/previous buttons view needs to create a separate cObj for the list view instance
+- [#3629] Remove superfluous intvals and parentheses
+- [#3628] Drop 'uid' from tx_realty_pi1_NextPreviousButtonsView::sanitizeAndSplitListViewLimitation
+- [#3625] Typo getSelectForListVew
+
+Changes:
+- [#5231] Switch from getRestrictedImage to cObj->IMAGE
+- [#5227] Convert the manual to ReST
+- [#5220] Require oelib 0.8.0
+- [#5176] Update maximum PHP version to 5.6
+- [#5014] Convert the e-mail functions to SwiftMailer
+- [#5147] Sort the filter checkboxes in the list view by title
+- [#5069] Rework the "inexact Google Maps" location feature
+- [#3452] Add the company name to ext_emconf.php
+- [#4611] Increase the maximum image upload size from 500kB to 2MB
+- [#4470] Stop using the district in the geocoding
+- [#4352] Require PHP 5.3
+- [#4140] Require TYPO3 4.5
+- [#3987] Require TYPO3 4.4
+- [#4197] Make CSS Styled Content a requirement
+- [#4101] Also allow negative numbers for the floor in the BE and FE editor
+- [#4119] Drop all-zero positions after the decimal point in the FE display of areas, lengths and prices
+- [#4117] In the list view, put the first of two images in the left position
+- [#4109] Change tx_realty_Model_RealtyObject::getAddressParts from private to protected
+- [#3079] Only load the related images and documents from the DB if the relation counter is > 0
+- [#4063] Allow images with an empty title
+- [#4065] Reorder the fields in the overview table
+- [#4010] Use the mapper to save imported images
+- [#3097] Require TYPO3 4.3 for realty
+- [#2153] Drop the classic gallery
+- [#3723] Don't include the message text in the contact form e-mail if it is empty or not part of the form
+- [#3738] Require static_info_tables >= 2.1.0
+- [#3066] Use the new getters/setters when using the configuration proxy
+- [#3450] Mention in setup.txt that the admin should not copy'n'paste the complete template into the TS template
+- [#3720] In the contact form, make it optional to show the message text and to have it as a required field
+- [#3729] Provide ext_autoload for our extensions
+- [#3603] Remove the old phone number field
+- [#3648] Remove the manual setting of the configuration pidList and recursive in pi1
+- [#3641] Update all copyrights to 2010
+
+Cleanup:
+- [#5205] Add wrappers for the GLOBALS
+- [#5213] Remove SOBE->include_once
+- [#5207] Drop unnecessary CDATA
+- [#4320] Enhance the @var/@param|@return type hinting
+- [#5206] Drop the unset from tearDown()
+- [#5198] Make setUp and tearDown protected
+- [#5203] Shorten the boolean casts
+- [#5201] Convert intval/float to casts
+- [#5200] boolean -> bool, integer -> int
+- [#5088] Shorten the die() line
+- [#4943] Add missing @throws annotations
+- [#5199] Use $GLOBALS['TCA'] instead of $TCA
+- [#5197] Use comments instead of PHPDoc style comments in copyright block
+- [#4019] Drop lib/tx_realty_constants.php
+- [#4881] Use t3lib_div::makeInstance instead of ObjectFactory::make
+- [#4998] Use type[] instead of array<type>
+- [#4842] Drop the todo.txt file
+- [#4832] Remove the closing PHP tags
+- [#4626] Fix all instances of "Missing function doc comment"
+- [#4625] Fix all instances of "Underscores are not allowed in method names"
+- [#4631] Drop useless class comments
+- [#4630] Update the copyright to 2013
+- [#4623] Fix all instances of "Missing @return tag in function comment"
+- [#3774] Implement the Geo interface for realty
+- [#3451] Use TYPO3's autoloader instead of oelib's autoloader
+- [#4278] Update the copyright to 2012
+- [#4452] Stop using the DATABASE_QUERY_ERROR and DATABASE_RESULT_ERROR constants
+- [#4276] Add the parameter name to all @param
+- [#4326] Remove the Zend Studio metadata from all projects
+- [#4281] Make true, false and null uppercase
+- [#4275] Convert the XCLASS code to use $GLOBALS
+- [#4177] Update the copyright to 2011
+- [#4274] Drop the XCLASS code from abstract classes
+- [#2628] Use frontEndLoginManager::loginUser
+- [#4132] Use the time constants from tx_oelib_Time
+- [#4047] Rename all test classes from *_testcase to *Test
+- [#4018] Use the mapper for getting the images for the gallery and the FE image upload
+- [#2049] Drop our copy of t3lib_div::rmdir
+- [#3863] Drop our own exception handlers in realty
+- [#3771] Clean up and unit-test tx_realty_pi1_AbstractListView::getSelfUrl
+- [#3434] Replace false/true with FALSE/TRUE
+
+
+0.5.0 - released 2010-02-23
+- [#3593] Fix: Config check warning on the single view page
+- [#3590] Localization: Update the NL localization
+- [#3589] Fix: Fix the spelling in the German search widget flexforms
+- [#3566] Feature: Add a checkbox in the flexforms for the "previous/next element" buttons
+- [#3565] Fix: District list in BE not populated in TYPO3 4.2
+- [#3515] Feature: Change the "back" link in the single view to include the piVars
+- [#3514] Feature: Add "previous"/"next" buttons to the single view
+- [#3420] Feature: Add a modal editor for entering districts
+- [#3238] Feature: Add functions for asking the list view for getting the UID of the n-th object
+- [#3525] Change: Remove/Mock more Google Maps lookup tests
+- [#3465] Change: Move default realty list view-related functions into own class
+- [#3512] Feature: Provide all piVars in the link from the list view to the single view
+- [#3537] Feature: Add CityMapper::findByName and DistrictMapper::findByNameAndCityUid
+- [#3546] Fix: Move the special case for the favorites from the list view class to the favorites class
+- [#3467] Change: Move the "objects by owner view" related function into own class
+- [#3285] Feature: In the flexforms, add a checkbox for each single view button
+- [#3511] Feature: In the link to the single view, provide the number of the clicked item within the list
+- [#3513] Feature: Add the list type (favorites etc.) to the link from the list view to the single view
+- [#3466] Change: Move functions related to the "my objects" view into own class
+- [#3418] Feature: When selecting a city in the FE editor, load the districts for selection (via AJAX)
+- [#3464] Change: Move favorite list view related functions into own class
+- [#3419] Feature: In the selector widget, load the districts by city
+- [#3463] Fix: Google Maps geocoding lookups need to be throttled
+- [#3456] Change: Remove the check that the construction year lies in the past
+- [#3237] Feature: In the link from the list view to the single view, provide the UID of the list view content element and add a configuraton for this
+- [#3509] Cleanup: Use the oelib_db wrappers in the list view
+- [#2353] Cleanup: Move the FE editor JavaScript to the external file
+- [#3501] Fix: Crash in TYPO3 4.3 (trunk) after saving in the FE editor or the image upload
+- [#3508] Cleanup: Replace space + tab with tab
+- [#3421] Feature: Add an EM update function for the district->city relation
+- [#172] Feature: Add number of found results in list
+- [#3266] Change: Update to the latest versions of Prototype and Scriptaculous
+- [#3486] Change: Load Prototype if the city and district drop-down are present in the search widget
+- [#3493] Fix: The checkbox filter deletes the piVars of the search widget
+- [#3075] Change: Move the list views to their own classes
+- [#3422] Feature: Show the number of objects after the city and district names in the selector widget
+- [#3417] Feature: When setting a city in the BE object editor, load the districts for selection
+- [#3485] Feature: Add a function for getting all districts by city to the district mapper
+- [#3416] Feature: Add a relation from the districts to the cities
+- [#3415] Feature: Add models and mappers for cities and districts
+- [#3474] Fix: Add all required parameters to the geocoding request
+- [#3448] Fix: test_ImportFromZip_ForNonExistingImportFolder_ReturnsFolderNotExistingErrorMessage fails
+- [#3447] Fix: Import fails with error message: import folder does not exist
+- [#3224] Fix: Make sure all <script> tags have proper CDATA
+- [#3368] Feature: Filter the list view by the selected number of rooms
+- [#3367] Feature: Add a search widget for the number of rooms
+- [#3366] Change: Change the room numbers to decimals
+- [#2082] Change: Use geolocation lookup mockups for the tests
+- [#3428] Fix: PHP warning during the OpenImmo import
+- [#3284] Fix: Provide unique CSS classes for all buttons
+- [#3286] Feature: Add Google Maps to the list of checkboxes for the single view
+- [#3141] Change: Make sure that ISO8859-1 XML files can be imported as well
+- [#3427] Fix: Misspelled word in cronjob import message
+- [#3034] Fix: Button of search widget is too wide in IE6
+- [#3365] Feature: Add a search widget for the district
+- [#3383] Fix: Image import fails
+- [#3345] Feature: Filter the list view by the selected house type
+- [#3102] Fix: Make sure that the image files of deleted objects do not get imported
+- [#3317] Fix: Check for object comparisons / recursive nesting
+- [#3341] Fix: Typo in ext_tables.php
+- [#3324] Change: Change all getNewGhost/set* sequences to getLoadedTestingModel in realty
+- [#3131] Feature: Create a CLI script for cleaning up unused image files
+- [#3321] Change: Move the loading of the model out of the loop in pi1_FurtherDescriptionView::render
+- [#3309] Fix: Test failure: testRenderReturnsEmptyResultForEmptyFurtherDescriptionOfValidRealtyObject
+- [#3302] Fix: Multiple tests regarding retrieveCoordinates fail.
+- [#3246] Fix: Coordinates have changed again
+- [#3254] Change: Also import the rent from "kaltmiete" if "nettokaltmiete" is empty or missing
+- [#1868] Feature: Add a try/catch construct around the realty pi1 and cli main functions
+- [#3277] Fix: HTML is double-escaped in object titles in the list view
+- [#3228] Fix: Objects for rent are imported as for sale
+- [#3196] Change: Don't display the "available from" field in the list view and single view if it is empty
+- [#3195] Feature: Add some object states
+- [#3154] Localization: Add an Italian localization, thanks to Roberto Torresani
+- [#3153] Fix: Typo in German locallang: "E-Mail-Addresse" -> "E-Mail-Adresse"
+- [#3150] Change: Add some default configuration for the classic gallery pop-up window
+- [#3044] Change: Remove deprecated functions for oelib 0.7.0
+- [#3080] Change: Use the object factory
+- [#3027] Change: In the BE OpenImmo import module, be more specific in the error messages
+- [#3018] Feature: Check that the realty uploads folder exists and is writable
+- [#3009] Change: Check if the import folder exists and is readable
+- [#3004] Fix: OpenImmo import in the BE doesn't work with non-Firefox browsers
+- [#3003] Fix: HTML validation errors in the search widget
+- [#2712] Feature: Add a setting for the maximum size of full-size Lightbox images
+- [#2983] Feature: Show the owner image in the offerer list and the object single view
+- [#2985] Feature: Also show the OpenImmo import BE module for non-admin BE users
+- [#2976] Fix: Error in the BE module if a page is selected
+- [#2970] Change: Recommend sr_feuser_register in ext_emconf
+- [#2969] Change: Change the error message when ZipArchive could not be found
+- [#2953] Fix: Use TYPO3's wrapper for the multibyte string functions
+- [#2875] Feature: Add an OpenImmo import to the BE module
+- [#1740] Fix: Delete the editorcfg entry from ext_localconf.php plus the related files
+- [#2897] Fix: Empty space in empty list view
+- [#2874] Feature: Add a back-end module "Realty"/"Immobilien"
+- [#2899] Fix: Googlemaps display switch in single view is not loaded from flexforms
+
+0.4.0 - released 2009-07-01
+- [#2845] Change: Display the prices with decimals again
+- [#2824] Fix: In the access check tests use try/catch instead of asserting the exeption when testing the headers
+- [#2818] Fix: Hidden objects cannot be edited
+- [#2302] Fix: tx_realty_cacheManager::clearFrontEndCacheForRealtyPages should also work with TYPO3 4.3
+- [#2515] Change: Use the address as title for the Google Maps markers
+- [#2403] Change: The district should also be used when looking up the geo coordinates
+- [#2748] Feature: Add input fields "living area from ... to" and filter the list view accordingly
+- [#2747] Feature: Add two input fields for rent/buying price and filter the list view accordingly
+- [#2745] Feature: Add radio buttons rent/sale and filter the list view accordingly
+- [#2474] Change: Use function FrontEndUser::hasGroupMembership
+- [#2744] Feature: If only one part of the search widget is visible, automatically submit the form after data has been entered
+- [#2746] Change: Change the label "Preisspanne" to "Kaufpreis/Miete"
+- [#2743] Feature: Provide the parts of the search widget with IDs so they can be styled with CSS easily
+- [#2742] Change: Make the city selector part of the search widget
+- [#2708] Feature: Add a FrontEndLoginManager
+- [#2741] Feature: Add a list of checkboxes in the flexforms concerning which parts of the search widget should be shown
+- [#1571] Feature: Add a description to the content wizard
+- [#2771] Feature: Add function setToDeleted to the model
+- [#2770] Fix: Some of the button images don't have anti aliasing.
+- [#2709] Change: Use less DB accesses in the unit tests
+- [#2755] Fix: CLI user needs the uppercased prefix _CLI_
+- [#2729] Fix: lowercase the CLI user defined in localconf
+- [#2678] Feature: Enhance the exception that is thrown when accessing a dead model's data
+- [#2648] Feature: Allow hiding/showing the button "show objects by this offerer"
+- [#2699] Change: Disable Google Maps zoom
+- [#2700] Fix: testRenderReturnsEmptyResultForUidOfObjectWithoutImagesProvided fails
+- [#2665] Fix: The formatter needs to htmlspecialchar most fields
+- [#2660] Fix: The cache manager must not call tslib_fe::clearPageCacheContent_pidList statically
+- [#2651] Fix: OpenImmo import fails if there are quotation marks in the XML
+- [#2453] Feature: Add a flexforms chooser to display only certain parts of the single view
+- [#2685] Fix: Prices should be displayed without decimal in the FE
+- [#2454] Feature: Add an additional single view part "prices"
+- [#2676] Fix: Test errors for inexistent objects in the specialized contact form and thumbnails view
+- [#2452] Change: Further split the single view parts into separate views
+- [#2664] Feature: Add dataMapper::getNewGhost
+- [#2653] Change: Rename the "empty" state to "virgin"
+- [#2657] Change: testingFramework::cleanUp should clean up the mapper registry and everything
+- [#2217] Change: Delete the corresponding image file if an image record becomes deleted
+- [#2356] Change: Make the realty object inherit tx_oelib_Model
+- [#2054] Cleanup: Add @var to member variables in the Realty Manager
+- [#788] Fix: Use t3lib_div::trimExplode instead of explode
+- [#2649] Feature: Add a "Print" button to the single view
+- [#2627] Feature: Add a parameter $recordData to createAndLoginFrontEndUser
+- [#2629] Cleanup: Remove XCLASS stuff from all classes in tests/ and tests/fixtures/
+- [#2587] Fix: Image titles in the image upload dialog not aligned
+- [#2566] Change: Add unit tests for remaining ### in all views
+- [#2612] Fix: Buttons are misaligned in the my-objects view
+- [#2638] Fix: Missing showUid when using the save (and stay) link on the image upload page
+- [#2636] Fix: When going back from single view to list view, IE says: page no longer valid
+- [#2611] Change: Move the city above the district in the FE editor
+- [#2585] Change: Remove the recommendation for mailform_userfunc from ext_emconf
+- [#2614] Feature: Add a flexforms configuration concerning which fields should be shown in the contact form
+- [#2615] Feature: Add a flexforms configuration concerning which contact form fields should be required
+- [#2613] Feature: Add address fields to the contact form
+- [#2503] Feature: Add DB result and DB query exceptions and wrappers for executing queries
+- [#2577] Fix: Unused $result = ''; in tx_realty_pi1_SingleView::getLinkedImage
+- [#2355] Change: Move the single view to a separate class
+- [#2564] Fix: ###DISTRICT### in the list view with objects that have no disctrict
+- [#2315] Fix: Invalid HTML when editing an existing object
+- [#2540] Feature: Add and use class tx_realty_pi1_Formatter
+- [#1858] Change: Speed up the unit tests
+- [#2494] Change: The autoloader should include the constants
+- [#2521] Fix: Check for objectsLeftToEnter is performed on editing an object in FE editor
+- [#2502] Change: Update copyrights to 2009
+- [#2483] Change: Remove all calls to setCss
+- [#2431] Feature: Add a google-maps view class
+- [#2456] Feature: Add lazy loading for models
+- [#2084] Change: Move getAddressAsHtml to the Realty Object class
+- [#768] Change: Use real visibility keywords (public/protected/private)
+- [#2455] Change: Shorten some search widget labels
+- [#2410] Change: Make some labels clearer
+- [#2446] Fix: Remove locallang labels from pi1/locallang.xml
+- [#2100] Feature: Create a separate class for access check in the FE
+- [#2442] Fix: Links to the gallery (from the single view thumbnails and the gallery thumbnail) don't have a cHash anymore
+- [#2443] Fix: Empty image frames in the classic gallery for objects with deleted images
+- [#2392] Feature: Add a print stylesheet to the single view
+- [#2435] Change: Allow having non-identical template objects for the same template file
+- [#2370] Feature: During the OpenImmo import, only import objects up the the FE user's limit
+- [#2402] Feature: Add and use a view class
+- [#2371] Feature: Only allow entering new objects in the FE editor if the user's limit has not been reached or exceeded yet
+- [#2322] Feature: Create an autoloader for models and other classes
+- [#2406] Fix: hoa_fee should be visible in sale objects and hidden in rent objects in the FE editor and in the BE
+- [#2236] Change: Use mysql_free in realty
+- [#2417] Feature: CreateFrontEndUser should automatically create a group if needed
+- [#2422] Change: The FE form should only create the FORMidable object when it actually is needed
+- [#2420] Fix: With the current oelib trunk, some subparts in the "my objects" view are not hidden
+- [#2369] Feature: Display a message in the "my objects" list: "You can still enter x objects."
+- [#2385] Change: Shorten the label for the object number/UID search
+- [#2404] Fix: Make sure that main and render is called only once per test
+- [#2405] Fix: Drop unused variables
+- [#2398] Feature: Add a button "advertise"
+- [#2396, #2397] Feature: Add configurations for the duration of an advertisement, the page ID and the link parameters
+- [#2395] Feature: Add a field "advertised" (date) to realty records
+- [#2391] Feature: Add a checkbox "random sorting" to the list view flexforms
+- [#2266] Feature: Link the image thumbnails (in the list of attached images) to Lightbox
+- [#2357] Fix: testRetrieveCoordinatesReturnsExactCoordinatesForValidAddressIfNothingWasCached and testRetrieveCoordinatesSavesCoordinatesWithDecimalDot fail
+- [#2317] Change: Change the display of the contact data in the offerer list and on the single view page
+- [#2390] Change: Allow having the single view and the list view on the same page
+- [#2219] Feature: Add a field "sorting" to realty objects
+- [#2375] Fix: Images are deleted when using Google Maps in the single view
+- [#2389] Fix: Crash during the import
+- [#2368] Feature: Add a field "maximum number of realty objects" to the FE user table
+- [#2387] Change: Require FORMidable 1.1.0
+- [#2267] Feature: Add a "delete" button after each attached image in the image upload dialog
+- [#2265] Feature: In the list of attached images, show thumbnails of the images
+- [#2334] Change: In the list view, crop the titles after 75 characters
+- [#2285] Fix: Importing images with commas in the file names cause error messages in the BE
+- [#1100] Change: Use the new function names from oelib
+- [#2314] Feature: Dynamically hide/show the fields in the FE editor depending on the object type (rent/sale)
+- [#2336] Fix: Text "\ No newline at end of file" in two files
+- [#2316] Change: Change the sorting of the offerer list
+- [#2259] Change: Only show the country in the single view if it differs from the default country from the Setup
+- [#2184] Fix: "my objects" list shouldn't config check for the favoritesPID
+- [#2310] Fix: Import "rent_excluding_bills" from "nettokaltmiete", not from "kaltmiete"
+- [#2307] Fix: Drop unused variables
+- [#2286] Fix: Use unique file names for images to avoid deletions
+- [#2216] Change: When updating a realty record, delete all image records which are not mentioned in the XML
+- [#2272] Fix: loginPID needs to be config-checked on the "my objects" page
+- [#2120] Change: Use tabs for indentation only at the beginning of lines
+- [#2296] Fix: ZIPs starting with 0 not working
+- [#2298] Change: The contact information data ZIP and city should be in one row in the single view.
+- [#2173] Change: Drop the square image for the button in the contact form
+- [#2062] Feature: Add checkboxes which contact data to display and allow to restrict this setting on certain user groups
+- [#2101] Feature: Provide Lightbox 2 for the gallery
+- [#2222] Fix: The PID of an existing object must not be changed by editing it in the FE editor
+- [#2258] Fix: The city selector doesn't use the target PID from flexforms in the link
+- [#2248] Fix: Fix the order of __destruct and unset calls
+- [#2243] Change: Use tx_oelib_db::createRecursivePageList
+- [#2097] Change: Use tx_oelib_db::enableFields
+- [#2123] Fix: Huge memory consumption through createFakeFrontend()
+- [#2194] Feature: Automatically redirect to the single view if the filtered list view has only one result
+- [#2223] Change: Use spaces as thousands separator
+- [#2193] Feature: Filter the list view by the UID/object number provided from the filter form
+- [#2174] Feature: Integrate the fields from realty_steffek
+- [#2192] Feature: Add a field for the object number to the search form
+- [#2065] Feature: Create a list of realty offerers
+- [#2207] Feature: The import should find ZIPs also in subdirectories of the specified directory
+- [#2131] Change: Use ensureIntegerPiVars instead of securePiVars
+- [#1911] Change: All tests for the target page of links can check for ?id=pageid
+- [#1778] Change: Use the abstraction for session handling
+- [#2171] Fix: Test failure: testCreateListViewReturnsMainSysFolderRecordsAndSubFolderRecordsIfRecursionIsEnabled
+- [#2210] Fix: hoa_fee is displayed without the currency in the single view
+- [#2132] Feature: Import the country
+- [#1710] Feature: Test whether the import directory is writable
+- [#2206] Fix: Cannot select a page for object in a city
+- [#2088] Fix: Deleted images must not be displayed in the FE
+- [#2169] Feature: Populate the marker ###OBJECT_NUMBER### in the list view
+- [#2150] Fix: Unit test failure because the exact US coordinates are checked with a too small delta
+- [#2144] Fix: Don't use translate('')
+- [#2130] Change: countRecords should only find dummy records
+- [#2134] Fix: A timestamp is stored for "available_from" but should be a string
+- [#1506] Feature: Add a field "show object address" and use it
+- [#1287] Change: Clean up the HTML template
+- [#2125] Feature: Additional test for the city selector
+- [#2064] Feature: Link the list of objects by the owner from the detail page
+- [#2128] Change: Move the list view Google Map from the bottom to the top
+- [#2129] Change: Allow FORMidable maintenance releases
+- [#2060] Change: Move the FE editor-related settings into the "FE editor" tab
+- [#2063] Feature: List of all (non-hidden) objects by a certain owner
+- [#2086] Change: Change the template to have the list view subpart only once
+- [#1219] Feature: Change the images in the gallery using JavaScript
+- [#2104] Fix: Unit test failure because the rough coordinates are checked with a too small delta
+- [#2103] Change: Move the heating types to the right
+- [#1917] Change: Use the createFakeFrontEnd function from the testing framework in the Realty Manager
+- [#1973] Change: Hide the "images to delete" label in the image upload dialog if no images are available
+- [#1785] Feature: Display the object locations in the list view using Google Maps
+- [#2081] Fix: The list of images in the image upload dialog needs to be sorted
+- [#1604] Feature: Display the object location in the detail view using Google Maps
+- [#2077] Localization: Add an ES localization, thanks to Miguel Pin
+- [#1985] Feature: Move the image upload dialog to HTML templates
+- [#1984] Feature: Move the FE editor to HTML templates
+- [#1502] Localization: Update the DK localization, thanks to Peter Hanstein
+- [#1501] Localization: Update the NL localization, thanks to Paul Effertz
+- [#1859] Fix: Objects that are hidden in TYPO3 cannot be deleted via the OpenImmo import
+- [#1989] Fix: The favorites PID needs to be configchecked in the details view
+- [#1367] Fix: The gallery pop-up uses the wrong URL in IE when using realURL
+- [#2039] Change: Cleanup the FE editor
+- [#1784] Feature: Fetch the geo coordinates from Google when displaying an object
+- [#1886] Feature: The config check should also check that the static template is included at all
+- [#2029] Change: Change the import of the condition to use localized strings
+- [#1777] Change: Use the file functions from t3lib_div
+- [#2030] Change: Change the import of the type of heating to use localized strings
+- [#2024] Fix: The DB tables use the column "accessible" which is a reserved word in MySQL 5.1
+- [#1983] Fix: Use the image's file name as title if no title is provided
+- [#2009] Fix: Test failure: testGetRedirectUrlReturnsUrlWithoutRedirectPidForMisconfiguredRedirectPid
+- [#1976] Fix: Adding pictures to objects in the BE fails
+- [#2007] Fix: An object is not linked to a city if the city existed before the import
+- [#2006] Feature: Add and import the field "HOA fee" ("Hausgeld")
+- [#1633] Feature: Import the currency
+- [#1603] Feature: Import the exact geo coordinates
+- [#1894] Change: Only reset the auto_increment value if it is much higher than the highest UID
+- [#1999] Change: Make the unit tests run on MAMP on OS X
+- [#1817] Feature: Add a TS setup setting for the Google Maps API key, initial patch by Alexander Grein
+- [#1780] Feature: Add fields for the geo location of an object, initial patch by Alexander Grein
+- [#1783] Feature: Add flexforms/TS setup switches for enabling Google Maps, initial patch by Alexander Grein
+- [#1782] Feature: Add a "country" field and a setting for a default country, initial patch by Alexander Grein
+
+0.3.0 - released 2008-11-04
+- [#1957] Feature: Add a switch to only import objects if there is a FE user with the corresponding ANID and in a selectable FE user group
+- [#1956] Feature: Automatically set the owner FE user during the import
+- [#1980] Change: Remove the function to find contact e-mails for unsuccesfully validated XML
+- [#1290] Fix: Checkboxes cannot be unchecked once they are checked
+- [#1978] Change: Add "ca." to the German label for the living area, patch by Sven Braun
+- [#1658] Feature: When FE-creating an object, automatically copy the ANID from the FE user record
+- [#1972] Fix: Cannot upload several images in a row when the redirect target is the "images" page
+- [#1914] Change: Build all redirection links and links in e-mails using cObj->typoLink_URL
+- [#1959] Feature: During the OpenImmo import, also use the OBID as key field
+- [#1961] Fix: Unit test failure: testFilterFormHasSubmitButton
+- [#1955] Feature: Add a field "OpenImmo offerer ID" to the FE users table
+- [#1849] Feature: Add an input box for filtering by ZIP code or city
+- [#1929] Fix: Failing unit test: testImagesInTheListViewDoNotContainLinkToGallery
+- [#1928] Fix: Failing unit test: testClearFrontEndCacheDeletesCachedPage
+- [#1850] Feature: Provide a list view filter for price ranges
+- [#1887] Fix: The contact form must not reinitialize the templatehelper object
+- [#1906] Change: Use $this->setExpectedException() instead of try-catch-block in the Realty Manager unit tests
+- [#1858] Change: Speed up unit tests
+- [#1789] Change: Remove the option for a target attribute for the gallery link
+- [#1848] Feature: Add a plugin type for additional filters to the list view
+- [#1749] Feature: Add a checkbox "use data from my account as contact data" to realty objects
+- [#1761] Fix: Remove the object summary and the form fields in the contact form if the UID is invalid
+- [#1835] Fix: Opening the gallery for an unpublished record causes mySQL error
+- [#1837] Change: Use the header proxy factory's discardInstance() function
+- [#1797] Change: Use the mailer factory's discardInstance() function
+- [#1606] Feature: Add unit tests for the e-mail functions of the OpenImmo import
+- [#1760] Change: Display an error message if the UID for the detail view is invalid
+- [#1788] Change: Remove "global" from the importer class
+- [#1725] Feature: Check whether ZipArchive is available
+- [#1827] Fix: FORMidable mayday when saving an object in the FE editor
+- [#1818] Change: Comment and whitespace consistency cleanup
+- [#1813] Change: Don't use addCssToPageHeader anymore
+- [#1787] Change: When a FE user is logged in, show the FE user's data in the contact form
+- [#1683] Change: Reorder the elements for better usability when editing a realty object in the FE table and BE editor
+- [#1650] Change: Use the header strategy in the Realty Manager
+- [#1799] Fix: Saving a published object shows an error message about the object number
+- [#1772] Feature: Add constants for frequently used error messages
+- [#1602] Feature: Add a switch for whether the ZIPs should be deleted after importing
+- [#1775] Change: Drop-down lists in the BE realty object editor should be sorted by title, Patch by Sven Braun
+- [#1766] Feature: Provide a dialog for entering cities and districts in the FE editing
+- [#1765] Change: Remove the fields "language" and "OBID" from the FE editing
+- [#1773] Fix: Detail view is broken when a FE user is logged in
+- [#1743] Fix: HTML validation errors
+- [#1457] Change: Use the configuration proxy in the template helper
+- [#1764] Fix: Include tslib_fe in the cache manager
+- [#1759] Feature: Make hidden objects visible in the detail view for authorized users
+- [#1750] Feature: Create a form for FE image upload
+- [#1754] Fix: The monkey functionality is broken in the contact form
+- [#1751] Localization: Add a Turkish localization, patch by Murat Caglayan
+- [#1501] Localization: Update the NL localization, patch by Paul Effertz
+- [#1262] Feature: Send an e-mail when a new object has been FE-created
+- [#1265] Feature: Add states "pending"/"published" to the FE-entered objects
+- [#1260] Feature: Add "delete" link to the "my records" list
+- [#1748] Fix: The realty object must not create auxilary records with UIDs as titles
+- [#1261] Feature: Make some fields required and add error messages
+- [#1745] Fix: Redirect URL for the "my objects" page is broken
+- [#1685] Feature: Clear the FE cache of pages with the Realty plugin after an object has been edited in the FE
+- [#1259] Feature: Under the "my objects" list, add a button "create new object"
+- [#1258] Feature: In the "my objects" list, add a link "edit"
+- [#1728] Change: Update the realty FE editing to FORMidable 1.0.0
+- [#1257] Feature: Add display type: "My realty objects"
+- [#1735] Fix: Unit tests failure
+- [#1254] Feature: Redirect after save
+- [#1256] Feature: Add "save folder" field to city record
+- [#1255] Feature: Fill drop-downs
+- [#1717] Change: Make the city and title required in the BE realty object editor
+- [#1709] Change: The thumbnails in the list view should lead to the detail view
+- [#1253] Feature: Create form for FE editing
+- [#1668] Feature: Create a new database column for old/new building and import the corresponding tag
+- [#1627] Change: Use the file with common constants from oelib
+- [#1675] Change: Move the table names to constants
+- [#1548] Change: Move templating functions from realty_pi1 to the template helper
+- [#1550] Feature: Allow to have a configurable address as BCC: in the contact form
+- [#1504] Fix: Sorting by related records sorts by UID
+- [#1631] Fix: Some auxiliary records do not get imported
+- [#1632] Feature: Use the combined fields "object number" and "language" for identifying an object in the DB
+- [#1665] Fix: When using the "choose sysfolder by filename" option, the image records will be put in the root page
+- [#1651] Change: Move the currency unit from the locale back into the TS setup
+- [#1657] Fix: xml-import of the dataset "elevator" failed
+- [#1104] Change: Use type hinting for function parameters
+- [#1250] Feature: Add configuration: sysfolder for new FE-created records
+- [#1251] Feature: Add new content type "FE editor"
+- [#1617] Change: Remove the ignoreValidation option and always proceed in case of validation errors
+- [#1647] Fix: Gallery is broken
+- [#1605] Change: The plugin and the content wizard should use the term "Realty Manager", not "Realty List"
+- [#1508] Change: Remove the "country" configuration and use config.locale_all instead
+- [#1264] Feature: Add contact form
+- [#1487] Change: Use camelCase for the class and file names
+- [#1465] Change: Change the way the CSS file is included
+- [#1544] Feature: Show the ZIP code of an object in the detail view
+- [#1618] Localization: Add a RU localization (localization by Stas Kobzar)
+- [#1607] Feature: Add a field in the EM: SysFolder to save the realty records to, depending on the ZIP file name
+- [#1446] Change: Move the flexforms file to pi1
+- [#1555] Change: Add a new content wizard icon
+- [#1532] Feature: Import the estate size and display it in the detail view.
+- [#1546] Change: Delete the ZIPs after import
+- [#1438] Fix: Clean up the OpenImmo import (and related) unit tests
+- [#1263] Feature: In the detail view, add a link to a contact page
+- [#1523] Fix: The temporary directories should be removed using rm -rf so no cruft will be left
+- [#1547] Feature: Add a test for importing a file with the same name twice
+- [#1521] Fix: Deleted records break all sorts of stuff
+- [#1541] Change: Remove the return; for functions that do not return anything
+- [#1538] Change: Do not allow to set a UID in an array to load as a realty object
+- [#1522] Fix: Importer needs to bail out if the temporary directory already exists.
+- [#1229] Change: Sorting of prices should be numerical, not alphabetical
+- [#1511] Change: Make the import messages more specific
+- [#1505] Fix: The city selector doesn't use the target PID in the redirect link
+- [#1510] Fix: EM configuration variable name for the XML Schema file not used consistently
+- [#1469] Feature: Add an icon for the content wizard
+- [#1492] Feature: Import and display the contact information
+- [#1435] Change: Simplify the inclusion of the favorites list in an e-mail form
+- [#1323] Change: Make use of the oelib testing framework for creating tx_realty, page and tt_content dummy records
+- [#1436] Feature: Allow to specify a sysfolder for the auxiliary records
+- [#1437] Feature: Add an option to always use the e-mail address from the EM
+- [#1447] Change: Use the EM configuration proxy in the Realty Manager
+- [#1239] Feature: Add an automatic configuration check
+- [#1463] Fix: Remove all call-time pass-by-reference
+- [#1455] Change: Use typo3/cli_dispatch.php to launch the CLI importer class
+- [#1434] Fix: Unit test failures
+- [#1402] Feature: Delete the corresponding record from database if 'aktion'=DELETE instead of importing this value to database
+- [#1322] Fix: In the unit tests, reset auto_increment for all tables that had test records
+- [#1398] Fix: Unit test failures
+- [#1245] Feature: Read the XML files and (re)write the corresponding records
+- [#1275] Feature: Create a class (model) that represents a realty object
+- [#155] Change: pi1: move createWhereClause to its own function
+- [#1218] Change: Format the prices according to the current FE language
+- [#1232] Fix: Make the Realty Manager work with oelib > 0.3.0
+- [#1384] Change: Require PHP 5.1
+- [#1249] Feature: Clear the FE cache after import
+- [#1227] Change: replace entities for square meters
+- [#876] Feature: Use IRRE for managing image records within realty objects
+- [#1227] Fix: Square meters is not displayed correctly in the string for living area's size
+- [#1242] Feature: Unpack ZIPs
+- [#1272] Change: Make use of PHP 5 capabilites (type hinting, real access modifiers)
+- [#1241] Feature: Add a class/module that can be called via a cron job
+
+0.2.0 - released 2008-07-14
+- [#1238] Feature: Include the object numbers and titles of the objects on the favorites list in an e-mail form
+- [#1240] Feature: Make it configurable whether to show the complete address of realty objects in the FE
+- [#1221] Feature: Gallery: add a CSS class "current" to the TD of the thumbnail of the current image
+- [#1233] Fix: Don't call enableFields statically
+- [#1222] Feature: Add a URL field "Separate details page" to the realty object records
+- [#1216] Localization: Provide a DK FE localization, patch by Sven Wolfermann
+- [#1223] Change: For objects that are for sale, the price should be shown in the list view instead of the rent
+- [#1168] Change: In the locallang files, convert the HTML entities for umlaut to real UTF-8 umlaut
+- [#67] Fix: In the SQL schema, sanitize some types
+- [#1220] Change: Require TYPO3 4.1.2
+- [#1127] Change: Require TYPO3 4
+- [#1154] Feature: Allow to restrict access to the single view page to logged-in users
+- [#1146] Localization: Add a Dutch FE localization, localization by Michael Zweigle
+- Documentation: Documented the city selector in the manual
+
+0.1.1 - released 2007-08-26
+- Documentation: Add a reference and a tutorial to the manual
+- [#656] Code cleanup and refactoring
+- [#695] Fix: Cannot upload images
+- [#69] Fix: Create hash values for all language labels
+- [#176] Change: Provide icons for the Realty Manager
+- [#641] Fix: Flexform is shown twice if a second BE language exists
+- [#694] Fix: make the extension work with MySQL 5
+- Change: Removed the kickstarter files
+- [#643] Code cleanup and refactoring
+
+0.1.0 - released 2007-02-24

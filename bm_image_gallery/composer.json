@@ -1,0 +1,32 @@
+{
+  "name": "bitmotion/bm-image-gallery",
+  "description": "Simple gallery using FileCollections.",
+  "type": "typo3-cms-extension",
+  "homepage": "https://www.bitmotion.de",
+  "license": [
+    "GPL-3.0-or-later"
+  ],
+  "support": {
+    "issues": "https://github.com/bitmotion/typo3-image-gallery/issues"
+  },
+  "authors": [
+    {
+      "name": "Florian Wessels",
+      "email": "f.wessels@bitmotion.de",
+      "role": "Developer",
+      "homepage": "https://www.bitmotion.de"
+    }
+  ],
+  "require": {
+    "typo3/cms-core": "^7.6 || ^8.7 || ^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bitmotion\\BmImageGallery\\": "Classes"
+    }
+  },
+  "replace": {
+    "bm_image_gallery": "self.version",
+    "typo3-ter/bm-image-gallery": "self.version"
+  }
+}

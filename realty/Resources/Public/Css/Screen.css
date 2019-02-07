@@ -1,0 +1,73 @@
+/***** General styles *****/
+
+.tx-realty-pi1 a.button,
+.tx-realty-pi1 span.button {
+    display: block;
+    height: 18px;
+    line-height: 18px;
+    margin: 1px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 11px;
+    color: white;
+    text-decoration: none;
+    border: none;
+    background: url(../Images/ButtonLeft.png) no-repeat top left #FF6600;
+    padding-left: .5em;
+}
+
+.tx-realty-pi1 a.button span,
+.tx-realty-pi1 span.button span {
+    display: block;
+    background: url(../Images/ButtonRight.png) no-repeat top right #FF6600;
+    padding-right: .5em;
+}
+
+.tx-realty-pi1 span.button span {
+    cursor: default; /* for disabled buttons, don't use the "I" text cursor */
+}
+
+.tx-realty-pi1 a.button span {
+    cursor: pointer; /* IE hack */
+}
+
+.tx-realty-pi1 span.act,
+.tx-realty-pi1 a.act {
+    background: url(../Images/ButtonLeftDisabled.png) no-repeat top left #B3C5D3;
+}
+
+.tx-realty-pi1 span.act span,
+.tx-realty-pi1 a.act span {
+    background: url(../Images/ButtonRightDisabled.png) no-repeat top right #B3C5D3;
+}
+
+/* Images in result list and single view */
+.tx-realty-pi1 .image {
+    border: 1px solid #B3C5D3;
+}
+
+/***** SEARCH WIDGET *****/
+
+#tx_realty_pi1_searchWidget_district {
+    position: relative;
+}
+
+#tx-realty-pi1-loading {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: -3px;
+    right: -12px;
+    background: url(../Images/Spinner.gif) no-repeat center #fff;
+}
+
+/***** SINGLE VIEW *****/
+
+.tx-realty-pi1 a.printPage {
+    margin-left: 10px;
+}
+
+/***** FRONT-END EDITOR *****/
+.tx_realty_pi1_modalbox_buttons {
+    margin-top: 1em;
+}

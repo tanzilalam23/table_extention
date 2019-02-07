@@ -1,0 +1,60 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	This Template is responsible for creating a table of domain objects.
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="content">
+		<h1><u>List of Content</u></h1>
+
+		<f:flashMessages />
+		<f:for each="{fcontents}" as="fcontent">
+
+		<table  class="tx_abc" >
+			
+
+			
+				<tr>
+						<td><f:translate key="tx_abc_domain_model_fcontent.title" /></td>
+							
+					
+					<td><f:link.action action="show" arguments="{fcontent : fcontent}"> {fcontent.title}</f:link.action></td>
+
+				<td><f:link.action action="edit" arguments="{fcontent : fcontent}">Edit</f:link.action></td>
+
+				<tr>
+					<td><f:translate key="tx_abc_domain_model_fcontent.subtitle" /></td>
+					
+					
+				<td><f:link.action action="show" arguments="{fcontent : fcontent}"> {fcontent.subtitle}</f:link.action></td>
+				<td><f:link.action action="delete" arguments="{fcontent : fcontent}">Delete</f:link.action></td>
+
+				</tr>
+				<tr>
+				<td><f:translate key="tx_abc_domain_model_fcontent.priority" /></td>
+
+				<td><f:link.action action="show" arguments="{fcontent : fcontent}"> {fcontent.priority}</f:link.action></td>
+				</tr>
+				
+				
+					
+				
+			
+		</table>
+		
+		<br>
+		</f:for>
+
+
+
+		<f:link.action action="new">New Fcontent</f:link.action>
+	</f:section>
+</html>
