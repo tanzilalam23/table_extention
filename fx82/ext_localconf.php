@@ -9,11 +9,13 @@ call_user_func(
             'F6.Fx82',
             'Fx82',
             [
-                
+                'Team' => 'list, show, new, create, edit, update, delete',
+                'Country' => 'list, show, new, create, edit, update, delete'
             ],
             // non-cacheable actions
             [
-                
+                'Team' => 'create, update, delete',
+                'Country' => 'create, update, delete'
             ]
         );
 

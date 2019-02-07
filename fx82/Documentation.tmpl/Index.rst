@@ -31,10 +31,10 @@ Team
 		2019
 
 	:Author:
-		Tanzil
+		tanzil
 
 	:Email:
-		tanzil@gmail.com
+		md_tanzil@ymail.com
 
 	:License:
 		This document is published under the Open Content License
