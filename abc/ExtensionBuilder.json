@@ -66,6 +66,17 @@
                             "propertyName": "priority",
                             "propertyType": "Integer",
                             "uid": "639939536994"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "image",
+                            "propertyType": "Image",
+                            "uid": "298401343994"
                         }
                     ]
                 },
@@ -92,7 +103,7 @@
         },
         "extensionKey": "abc",
         "name": "fx_content",
-        "originalExtensionKey": "list",
+        "originalExtensionKey": "abc",
         "originalVendorName": "Demo",
         "persons": [
             {
@@ -118,7 +129,7 @@
     },
     "wires": [],
     "log": {
-        "last_modified": "2019-02-06 07:50",
+        "last_modified": "2019-02-08 09:53",
         "extension_builder_version": "8.10.4",
         "be_user": " (1)"
     }

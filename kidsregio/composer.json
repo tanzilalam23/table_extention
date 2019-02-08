@@ -1,0 +1,28 @@
+{
+    "name": "netzrezepte/kidsregio",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [
+        {
+            "name": "aftab",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^8.7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Netzrezepte\\Kidsregio\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Netzrezepte\\Kidsregio\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "kidsregio": "self.version",
+        "typo3-ter/kidsregio": "self.version"
+    }
+}
